@@ -3,7 +3,7 @@ from time import sleep
 from time import time
 #from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 import requests
 from user_information import login,password,LINE_token
@@ -31,11 +31,11 @@ def main():
 		# ヘッドレスモードの設定。
 		# True => ブラウザを描写しない。
 		# False => ブラウザを描写する。
-		options = Options()
-		options.add_argument('--headless')
+		#options = Options()
+		#options.add_argument('--headless')
 
 		# Chromeを起動
-		driver = webdriver.Chrome(executable_path="./chromedriver.exe", chrome_options=options)
+		driver = webdriver.Firefox()
 
 		# ログインページを開く
 		driver.get(url)
